@@ -1,6 +1,13 @@
-## The makeCacheMatrix instantiates a list that holds a specified matrix and 
-## functions to set and get the matrix, and holds an inverse of the matrix as 
-## well as to set and get the inverse
+## Function: 
+##      makeCacheMatrix
+## Summary:
+##      The makeCacheMatrix instantiates a list that holds a specified matrix 
+##      and functions to set and get the matrix, and holds an inverse of the 
+##      matrix as well as to set and get the inverse.
+## Inputs:
+##      theMatrix: the initial matrix of the cacheMatrix "object"
+## Returns:
+##      The cacheMatrix "object"
 
 makeCacheMatrix <- 
     function(
@@ -86,14 +93,24 @@ makeCacheMatrix <-
     }
 
 
-## The cacheSolve takes in a cacheMatrix "object" and sets its inverse, if the
-## inverse as not already been calculated
+## Function:
+##      cacheSolve
+## Summary:
+##      The cacheSolve calculates the inverse of the specified cacheMatrix 
+##      "object". If the inverse is not already calculated, then it calculates 
+##      it and cashes it in the cacheMatrix "object", otherwise it returns the 
+##      already calculated inverse.
+## Inputs:
+##      theCacheMatrix: a cacheMatrix "object"
+## Returns:
+##      the inverse
 ## --
-## Another option would be: instead of having an external function set the
-## inverse, that the inverse is calculated and cached when the getInverse
-## function is called on the cacheMatrix. Would be much more cohesive design
-## from an OO perspective, considering that the cacheMatrix is a sort of object
-## with getter and setter functions within it.
+## Remarks:
+##      Another option would be: instead of having an external function set the
+##      inverse, that the inverse is calculated and cached when the getInverse
+##      function is called on the cacheMatrix. Would be much more cohesive design
+##      from an OO perspective, considering that the cacheMatrix is a sort of 
+##      object with getter and setter functions within it.
 
 cacheSolve <-
     function(
